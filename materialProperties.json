@@ -1,0 +1,23 @@
+{
+  "Trunk":{
+    "netEnergy":-5,
+    "color":"#7a4300",
+    "weight":5,
+    "support":50,
+    "photo":0.0
+  },
+  "Branch":{
+    "netEnergy":-1,
+    "color":"#bd751e",
+    "weight":1,
+    "support":14,
+    "photo":0.0
+  },
+  "Leaves":{
+    "netEnergy":-1,
+    "color":"#0bba2b",
+    "weight":2,
+    "support":4,
+    "photo":0.5
+  }
+}
