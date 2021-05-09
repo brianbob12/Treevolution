@@ -21,8 +21,8 @@ class Tree{
     }
     
   }
-  draw(cx,cy,size){
-    const drawSupports=true
+  draw(cx,cy,size,drawSupportsI){
+    const drawSupports=drawSupportsI==true
     for(const gene of this.phenotype.entries()){
       const splitLoc= gene[0].split(",")
       const x=int(splitLoc[0])
@@ -366,12 +366,13 @@ class Tree{
       for(var block in levels[i]){
         if(this.phenotype.get(levels[i][block])=="Leaves"){
           const column=int(levels[i][block].split(",")[0])
-          //add leaf height score
-          leafHeightScore += this.simulationPerameters["leafHeightScore"] ^ int(levels[i][block].split(",")[1]) -1
+          
+          const y=int(levels[i][block].split(",")[1])
           if(sunlight[column]==undefined){
-            sunlight[column]=this.simulationPerameters["sunIntensity"] * (1-this.materialProps["Leaves"].photo)
+            const absorbFactor=this.materialProps["Leaves"].photo/2+this.materialProps["Leaves"].photo*(1-1/(0.2*y+1))
+            sunlight[column]=this.simulationPerameters["sunIntensity"] * (1-absorbFactor)
             //add energy
-            totalNetEnergy += this.simulationPerameters["sunIntensity"] * this.materialProps["Leaves"].photo
+            totalNetEnergy += this.simulationPerameters["sunIntensity"] * absorbFactor
           }
           else{
             //add energy
