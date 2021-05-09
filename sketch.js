@@ -40,40 +40,6 @@ function setup() {
   nextGenButton.position(0,resetButton.height*3)
   nextGenButton.mousePressed(scaleDown)
   
-  //testing 
-  print(materialProperties)
-  var testGenotype=new Genotype();
-  testGenotype.addGene("0,0","Trunk")
-  testGenotype.addGene("0,100","Trunk")
-  testGenotype.addGene("0,200","Trunk")
-  testGenotype.addGene("0,300","Trunk")
-  testGenotype.addGene("100,0","Trunk")
-  testGenotype.addGene("100,100","Trunk")
-  testGenotype.addGene("100,200","Trunk")
-  testGenotype.addGene("100,300","Trunk")
-  testGenotype.addGene("-100,200","Leaves")
-  testGenotype.addGene("-100,300","Branch")
-  testGenotype.addGene("-200,300","Branch")
-  testGenotype.addGene("200,300","Leaves")
-  testGenotype.addGene("-100,400","Leaves")
-  testGenotype.addGene("-100,500","Leaves")
-  testGenotype.addGene("-200,400","Leaves")
-  testGenotype.addGene("-200,500","Leaves")
-  testGenotype.addGene("-300,300","Leaves")
-  testGenotype.addGene("-300,300","Leaves")
-  testGenotype.addGene("-300,400","Leaves")
-  testGenotype.addGene("100,400","Leaves")
-  testGenotype.addGene("0,400","Leaves")
-  testGenotype.addGene("0,500","Leaves")
-  
-  //testGenotype.mutate()
-  
-  //myTree= new Tree(testGenotype , materialProperties, simulationPerameters)
-  //myTree.getScore()
-  
-  //treeA=randomTree(12,1000)
-  //treeB=randomTree(12,1000)
-  //treeC=babyTree(treeA.genotype,treeB.genotype,0.0,1000)
   reset()
   
 }
